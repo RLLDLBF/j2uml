@@ -1,0 +1,55 @@
+{
+	"name": "j2uml",
+	"displayName": "J2UML",
+	"description": "This is an extention to extract UML from java.",
+	"keywords": [
+		"java",
+		"uml",
+		"nju"
+	],
+	"publisher": "lcww",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "images/icon.png",
+	"activationEvents": [
+		"onCommand:extension.j2uml"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.j2uml",
+				"title": "Diagrams"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.j2uml",
+					"group": "7_modification@1"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.40.0",
+		"babel-preset-latest": "^6.24.1",
+		"eslint": "^6.6.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {}
+}
